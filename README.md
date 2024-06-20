@@ -1,8 +1,8 @@
 ### Learn More
 
 For more detailed information and advanced usage, please refer to the following links:
-- [Learn more about $htp](https://ui.gilob.in/ajax/$htp/)
-- [Learn more about $htp dynamic](https://ui.gilob.in/ajax/dynamic/)
+- [$htp](https://ui.gilob.in/ajax/$htp/)
+- [$htp dynamic](https://ui.gilob.in/ajax/dynamic/)
 
 #### Key Features:
 1. **Automatic Task Execution:** Automatically execute tasks on page load.
@@ -28,14 +28,14 @@ Make sure to include the `$htp` and `$htp-task` scripts in your project:
 
 - **`htp-tsk`**: Defines the task's timing or recurrence.
   - `auto`: Execute task on page load.
-  - Time in milliseconds (e.g., `5000` for 5 seconds).
+  - Time in milliseconds (e.g., `5` for 5 seconds).
   - JavaScript expressions (e.g., `60 * 5` for 5 minutes).
 
 - **`htp-tsk-until`**: Defines conditions to stop the task. It can be based on status, headers, JSON response, or response text.
   - Examples:
     - `htp-tsk-until="status == 200"`
     - `htp-tsk-until="json.isOnline == true"`
-    - `htp-tsk-until="header['content-type'] == 'application/json'"`
+    - `htp-tsk-until="header.content_type == 'application/json'"`
 
 - **`htp-tsk-set`**: Specifies the data to update the element content.
   - Examples:
@@ -77,6 +77,18 @@ Automatically execute a task on page load and update an element with the respons
 Execute a task every 5 seconds until a certain condition is met.
 
 ```html
+<style>
+        .my-task[htp-tsk-on] {
+            /* Task is starting */
+            background-color: #f0f0f0;
+        }
+        .input-chat {
+            display: none;
+        }
+        .my-task[htp-tsk-json-s="100"] .input-chat {
+            display: block;
+        }
+</style>
 <div
   class="my-task"
   htp-get="/task-live"

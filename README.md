@@ -47,7 +47,6 @@ Make sure to include the `$htp` and `$htp-task` scripts in your project:
 - **`htp-tsk-abort`**: Abort the task. Can be set dynamically via JavaScript.
 - **`htp-tsk-on`**: Indicates that the task is running. Automatically managed by the extension.
 - **`htp-tsk-done`**: Indicates task completion. Automatically managed by the extension.
-- **`htp-tsk-cancled`**: Indicates task cancellation. Automatically managed by the extension.
 
 ### Examples
 

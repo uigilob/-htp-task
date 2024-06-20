@@ -123,4 +123,4 @@ document.addEventListener("evn-run",function() {
         }
     });
 });
-});   
+}();   

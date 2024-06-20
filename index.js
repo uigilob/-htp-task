@@ -46,7 +46,7 @@ document.addEventListener("evn-run",function() {
             function threading(timeing) {
                 if (timeing) {
                     setTimeout(function () {
-                        $htpTest.call(self, {}, {}, handler)
+                        $htp.call(self, {}, {}, handler)
                     }, timeing)
                 } else {
                     $htp.call(this, {}, {}, handler)

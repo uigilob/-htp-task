@@ -94,7 +94,7 @@ Execute a task every 5 seconds until a certain condition is met.
   htp-get="/task-live"
   htp-query='{"name":"value"}'
   htp-swap="append"
-  htp-tsk="5000"  <!-- Every 5 seconds -->
+  htp-tsk="5"  <!-- Every 5 seconds -->
   htp-tsk-until="json.isOnline == true && json.status == 100"
   htp-tsk-set="json.username"
 > 

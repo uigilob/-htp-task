@@ -84,6 +84,9 @@ Execute a task every 5 seconds until a certain condition is met.
         .my-task[htp-tsk-json-s="100"] .input-chat {
             display: block;
         }
+         .my-task[htp-tsk-cancled] {
+          /* if cancled*/
+}
 </style>
 <div
   class="my-task"

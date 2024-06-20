@@ -57,18 +57,11 @@ Automatically execute a task on page load and update an element with the respons
 ```html
 <div
   class="my-task"
-  htp-get="/task-live"
-  htp-query='{"name":"value"}'
-  htp-swap="append"
+  htp-get="/task-status"
+  htp-query='{"user":"active"}'
   htp-tsk="auto"
-  htp-tsk-until="json.isOnline == true && json.status == 100"
-  htp-tsk-set="json.username"
 > 
-  <div class="username" htp-data="">
-    <!-- Username will be updated here -->
-  </div>
-  <input class="input-chat">
-</div>
+ 
 ```
 
 #### Example 2: Recurring Task Every 5 Seconds

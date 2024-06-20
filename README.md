@@ -81,7 +81,10 @@ Execute a task every 5 seconds until a certain condition is met.
             /* Task is starting */
             background-color: #f0f0f0;
         }
-        .input-chat {
+         .my-task[htp-tsk-s='404']{
+           display: none;
+      }
+        .input-chat  {
             display: none;
         }
         .my-task[htp-tsk-json-s="100"] .input-chat {

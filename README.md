@@ -132,6 +132,12 @@ Include a button to abort the running task.
 </script>
 ```
 
-
+#### Events 
+this Event call while  htp-tsk-until
+```js
+ document.querySelector(".my-task").addEventListener("htp-tsk-end",function(){
+      /*end task event*/
+    })
+```
 
 These resources will provide you with comprehensive guides, examples, and best practices to effectively utilize the `$htp` and `$htp-task` extensions in your projects.

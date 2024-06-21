@@ -94,6 +94,10 @@ document.addEventListener("evn-run",function() {
                         self.setAttribute("htp-tsk-done", true) 
                         target.setAttribute("htp-tsk-done", true)
                         self.dispatchEvent(EndTask)
+                        if(target != self){
+                            target.dispatchEvent(EndTask)
+                        }
+                        
                         return null //end task
                     }
                 } catch (e) {

@@ -23,6 +23,8 @@
         return headersJson
     }
 
+/*end task event*/ var EndTask = new CustomEvent('htp-tsk-end');
+  
 document.addEventListener("evn-run",function() {
     $qsall("[htp-tsk]").forEach(function (e) {
         if (e.getAttribute("extension-htp-tsk") == null) {
@@ -89,8 +91,9 @@ document.addEventListener("evn-run",function() {
                         }
                         self.removeAttribute("htp-tsk-on")
                         target.removeAttribute("htp-tsk-on")
-                        self.setAttribute("htp-tsk-done", true)
+                        self.setAttribute("htp-tsk-done", true) 
                         target.setAttribute("htp-tsk-done", true)
+                        self.dispatchEvent(EndTask)
                         return null //end task
                     }
                 } catch (e) {
@@ -122,5 +125,5 @@ document.addEventListener("evn-run",function() {
 
         }
     });
-});
-}();   
+ });
+}(); 

@@ -61,7 +61,7 @@ Automatically execute a task on page load and update an element with the respons
   htp-get="/task-status"
   htp-query='{"user":"active"}'
   htp-tsk="auto"
-> 
+></div> 
  
 ```
 

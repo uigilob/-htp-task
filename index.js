@@ -37,7 +37,7 @@ document.addEventListener("evn-run",function() {
             target.setAttribute("htp-tsk-on", true)
             active(false)
             function active(timeing) {
-                if (self) {
+                if (document.contains(self)) {
                     threading.call(self, timeing)
                 }
 
